@@ -1,0 +1,3 @@
+module trainingday1 {
+	
+}
