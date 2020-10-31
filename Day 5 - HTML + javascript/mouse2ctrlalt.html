@@ -1,0 +1,26 @@
+<html>
+    <body onmousemove="boom()">
+        <input type="text" value="Hello" id="t" onmouseleave="clickit()">
+    <span id="A" style="position: absolute;top: 300;left: 500">
+    Janinder
+    </span>
+    </body>
+</html>
+<script>
+    let fs=10;
+    let ref=window.document.getElementById("A");    
+    function boom(){
+        if(window.event.ctrlKey==true){
+            fs++;
+        }
+        if(window.event.altKey==true){
+            fs--;
+        }
+        ref.style.fontSize=fs;
+        ref.style.top=window.event.clientY;
+        ref.style.left=window.event.clientX;
+    }       
+    function clickit(){
+        ref.innerHTML=window.document.getElementById("t").value;
+    }
+</script>
